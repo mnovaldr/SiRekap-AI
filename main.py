@@ -41,9 +41,9 @@ mlb_classes = None
 async def load_models():
     global tfidf_vectorizer, svm_model, mlb_classes
     try:
-        tfidf_vectorizer = joblib.load('tfidf_vectorizer.pkl')
-        svm_model = joblib.load('svm_model.pkl')
-        mlb_classes = joblib.load('mlb_classes.pkl')
+        tfidf_vectorizer = joblib.load('tfidf_vectorizer_final.pkl')
+        svm_model = joblib.load('svm_tuned_model.pkl')
+        mlb_classes = joblib.load('mlb_classes_final.pkl')
         print("[AI] Berhasil memuat model SVM, TF-IDF, dan MLB!")
     except Exception as e:
         print(f"[AI ERROR] Gagal memuat model .pkl. Error: {e}")
